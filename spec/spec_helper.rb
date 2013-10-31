@@ -4,6 +4,8 @@
 # loaded once.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require 'engine_cart'
 EngineCart.load_application!
 
 RSpec.configure do |config|
