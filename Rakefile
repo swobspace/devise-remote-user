@@ -7,7 +7,11 @@ end
 Bundler::GemHelper.install_tasks
 
 require 'rspec/core/rake_task'
-
 RSpec::Core::RakeTask.new(:spec)
+
+require 'engine_cart/rake_task'
+task :ci => ['engine_cart:generate'] do
+  # run the tests
+end	
 
 task :default => :spec
